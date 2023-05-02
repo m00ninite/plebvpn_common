@@ -10,7 +10,7 @@ class PlebError(IntEnum):
     NO_CONNECTION = 3
     ACCOUNT_DOES_NOT_EXIST = 4
     ACCOUNT_ALREADY_EXISTS = 5
-
+    SUCCESS = 6
 
 class UserAccountInfo(BaseModel):
     name: Union[str, None] = "satoshi"
@@ -22,7 +22,12 @@ class UserAccountInfo(BaseModel):
     ovpn_file: Union[str, None] = "/etc/openvpn/ovpns/dummy"
 
 
-class NewAccount(BaseModel):
+###### HTTP Request schemas #######
+class NewAccountReq(BaseModel):
     port: int
     pubkey: str
     name: str
+
+
+class PortReq(BaseModel):
+    port: int
