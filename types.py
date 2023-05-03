@@ -5,12 +5,13 @@ from typing import Union
 
 
 class PlebError(IntEnum):
+    SUCCESS = 0
     UNKNOWN = 1
     BAD_PORT = 2
     NO_CONNECTION = 3
     ACCOUNT_DOES_NOT_EXIST = 4
     ACCOUNT_ALREADY_EXISTS = 5
-    SUCCESS = 6
+
 
 class UserAccountInfo(BaseModel):
     name: Union[str, None] = "satoshi"
