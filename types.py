@@ -31,7 +31,6 @@ class NewAccountReq(BaseModel):
     port: int
     pubkey: str
     name: str
-    secret: str
 
 
 class PortReq(BaseModel):
@@ -41,3 +40,7 @@ class PortReq(BaseModel):
 class OpenVPNReq(BaseModel):
     name: str
     secret: str
+
+
+class CheckAccountReq(BaseModel):
+    name: str
