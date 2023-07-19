@@ -44,3 +44,10 @@ class OpenVPNReq(BaseModel):
 
 class CheckAccountReq(BaseModel):
     name: str
+
+
+class LightningImpl(IntEnum):
+    LND = 0
+    CLN = 1
+    BTCPayServer = 2
+
